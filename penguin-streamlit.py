@@ -91,10 +91,10 @@ from sklearn.ensemble import RandomForestClassifier
 st.write("""
 # Penguin Prediction App
 This app predicts the **Palmer Penguin** species!
-Data obtained from the [palmerpenguins library](https://github.com/allisonhorst/palmerpenguins) in R by Allison Horst.
+Data obtained from the [palmer penguins library](https://github.com/allisonhorst/palmerpenguins) in R by Allison Horst.
 """)
 
-st.sidebar.header('User Input Features')
+st.sidebar.header('User Input Features for Penguin Species Classifier')
 
 st.sidebar.markdown("""
 [Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/penguins_example.csv)
@@ -137,9 +137,6 @@ for col in encode:
     df = pd.concat([df, dummy], axis=1)
     del df[col]
 df = df[:1]  # Selects only the first row (the user input data)
-
-# Displays the user input features
-st.sidebar.header('User Input Features for Penguin Species Classifier')
 
 
 if uploaded_file is not None:
